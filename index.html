@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nils Coutant
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+   </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", () => AOS.init());
+   </script>
+   <script crossorigin="anonymous" src="https://kit.fontawesome.com/a2e9aeb8b1.js">
+   </script>
+  </link>
+ </head>
+ <body>
+  <header>
+   <h1 class="highlighted-title">
+    Nils Coutant
+   </h1>
+   <p class="subtitle">
+    Undergraduate physics student at EPFL and Imperial College London.
+    <br/>
+    This portfolio highlights selected academic and personal projects, mainly involving physics modeling, numerical methods, and programming.
+   </p>
+  </header>
+  <nav>
+   <div class="nav-container">
+    <ul class="menu">
+     <li class="dropdown">
+      <a href="#">
+       My projects &dtrif;
+      </a>
+      <ul class="dropdown-content">
+       <li>
+        <a href="#projet1">
+         Ideal gas
+        </a>
+       </li>
+       <li>
+        <a href="#projet2">
+         Discord Bot
+        </a>
+       </li>
+       <li>
+        <a href="#projet3">
+         Determinant
+        </a>
+       </li>
+       <li>
+        <a href="#projet4">
+         Quantum particle
+        </a>
+       </li>
+       <li>
+        <a href="#projet5">
+         Tsunami
+        </a>
+       </li>
+       <li>
+        <a href="#projet6">
+         Gravitation
+        </a>
+       </li>
+       <li>
+        <a href="#projet7">
+         Chaos
+        </a>
+       </li>
+       <li>
+        <a href="#projet8">
+         Experiments
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <div class="liens-nav">
+     <a href="https://github.com/nilsct" target="_blank">
+      <i class="fab fa-github">
+      </i>
+      GitHub
+     </a>
+     <a href="https://linkedin.com/in/nils-coutant" target="_blank">
+      <i class="fab fa-linkedin">
+      </i>
+      LinkedIn
+     </a>
+     <a class="cv-button" href="docs/nils_coutant_resume.pdf" rel="noopener" target="_blank">
+      Resume
+     </a>
+    </div>
+   </div>
+  </nav>
+  <main>
+   <a class="projet-link" href="https://github.com/NilsCt/gazparfaits">
+    <section class="projet" data-aos="fade-up" id="projet1">
+     <h2>
+      Ideal gas simulation
+     </h2>
+     <p>
+      This project began as a programming assignment during my first year at EPFL. The objective was to simulate an ideal gas using a hard-sphere collision model. Out of personal curiosity, I went beyond the initial requirements by adding numerous features and focusing on graphical visualization.
+      <br/>
+      <br/>
+      The simulation qualitatively reproduces key physical principles such as the ideal gas law, Dalton&rsquo;s law, Brownian motion, and thermodynamic cycles like Carnot and Stirling. While visually accurate, the results are not quantitatively reliable, as I had not yet been introduced to the numerical physics methods required for physically rigorous simulations.
+      <br/>
+      <br/>
+      Working on this first simulation taught me the importance of statistical smoothing in dynamic systems. I implemented optimized computation of temperature from collisions and used a moving average to stabilize pressure measurements over time.
+     </p>
+     <div class="video-grid">
+      <div class="video-container">
+       <video autoplay="" class="video-pair" loop="" muted="" playsinline="" src="videos/idealgas/basic.mp4">
+       </video>
+      </div>
+      <div class="video-container">
+       <video autoplay="" class="video-pair" loop="" muted="" playsinline="" src="videos/idealgas/stirling.mp4">
+       </video>
+      </div>
+      <div class="video-grid">
+       <div class="video-container">
+        <video autoplay="" class="video-pair" loop="" muted="" playsinline="" src="videos/idealgas/suivi.mp4">
+        </video>
+       </div>
+       <div class="image-container">
+        <img alt="Linearity of p and T" class="media-item" src="images/idealgas/idealgas_linearity.png"/>
+       </div>
+      </div>
+      <div class="video-grid">
+       <div class="image-container">
+        <img alt="Ideal gas law" class="media-item" src="images/idealgas/idealgas.png"/>
+       </div>
+       <div class="image-container">
+        <img alt="Dalton law" class="media-item" src="images/idealgas/dalton.png"/>
+       </div>
+      </div>
+      <div class="video-grid">
+       <div class="image-container">
+        <img alt="Carnot Cycle" class="media-item" src="images/idealgas/carnot.png"/>
+       </div>
+       <div class="image-container">
+        <img alt="Stirling cycle" class="media-item" src="images/idealgas/stirling.png"/>
+       </div>
+      </div>
+     </div>
+    </section>
+   </a>
+   <a class="projet-link" href="https://github.com/NilsCt/leveling-multiserver">
+    <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet2">
+     <h2>
+      Leveling - Discord Bot
+     </h2>
+     <p>
+      I developed this Discord bot independently before starting my studies at EPFL, using Kotlin and object-oriented programming. The bot rewards user engagement with experience points and leaderboards, encouraging activity in Discord communities. It was officially verified by Discord after a review and reached over 2000 servers before I shut it down at the start of my university studies.
+      <br/>
+      <br/>
+      This project taught me how to use APIs and third-party libraries effectively, and introduced me to important considerations around data security and user privacy. I also gained experience in related areas such as debugging, interface design, and branding &mdash; including creating visuals with GIMP and writing all in-bot communication in English. It required sustained effort over several months and taught me how to structure a large personal project.
+     </p>
+     <div class="image-stack">
+      <img alt="Image 1" class="media-stack-item" src="images/leveling/one.png"/>
+      <img alt="Image 2" class="media-stack-item" src="images/leveling/two.png"/>
+      <img alt="Image 3" class="media-stack-item" src="images/leveling/three.png"/>
+      <img alt="Image 4" class="media-stack-item" src="images/leveling/four.png"/>
+      <img alt="Image 5" class="media-stack-item" src="images/leveling/five.png"/>
+      <img alt="Image 6" class="media-stack-item" src="images/leveling/six.png"/>
+      <img alt="Image 7" class="media-stack-item" src="images/leveling/seven.png"/>
+     </div>
+    </section>
+   </a>
+   <a class="projet-link" href="https://github.com/NilsCt/animations-algebre">
+    <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet3">
+     <h2>
+      Visualizing the determinant of a linear transformation
+     </h2>
+     <p>
+      This shorter project was an introduction to Manim, a Python library for creating mathematical animations. I used it to visualize the geometric interpretation of the determinant and to better understand its properties.
+      <br/>
+      <br/>
+      I found that linear algebra often becomes more intuitive when visual connections are made between concepts. This project was a way to explore that dimension and experiment with Manim.
+     </p>
+     <video autoplay="" class="full-video" loop="" muted="" playsinline="" src="videos/determinant/determinant.mp4">
+     </video>
+    </section>
+   </a>
+   <a class="projet-link" href="docs/quantum_report.pdf" target="_blank">
+    <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet4">
+     <h2>
+      Quantum particle
+     </h2>
+     <p>
+      This project was part of a numerical physics course at EPFL, and focused on simulating the time-dependent Schr&ouml;dinger equation using the Crank&ndash;Nicolson method. We studied the quantum harmonic oscillator and the tunneling effect through a potential barrier.
+      <br/>
+      <br/>
+      I found that visual simulations make the behavior of the system easier to understand.
+     </p>
+     <div class="video-grid">
+      <div class="video-container white-bg">
+       <video autoplay="" class="video-full" loop="" muted="" playsinline="" src="videos/quantum/harmonic_oscillator.mp4">
+       </video>
+       <p class="video-caption">
+        Gaussian wave packet in a harmonic potential
+       </p>
+      </div>
+      <div class="video-container white-bg">
+       <video autoplay="" class="video-full" loop="" muted="" playsinline="" src="videos/quantum/potential_barrier.mp4">
+       </video>
+       <p class="video-caption">
+        Gaussian wave packet crossing a potential barrier
+       </p>
+      </div>
+     </div>
+     <div class="video-grid">
+      <div class="image-container">
+       <img alt="Wave function" class="media-item" src="images/quantum/potential_barrier.jpg">
+        <p class="video-caption">
+         Visualization of the wave packet crossing a potential barrier
+        </p>
+       </img>
+      </div>
+      <div class="image-container">
+       <img alt="Quantum Tunneling" class="media-item" src="images/quantum/tunnel_probability.jpg">
+        <p class="video-caption">
+         Transmission probability as a function of barrier energy
+        </p>
+       </img>
+      </div>
+     </div>
+    </section>
+   </a>
+   <a class="projet-link" href="docs/tsunami_report.pdf" target="_blank">
+    <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet5">
+     <h2>
+      Tsunami simulation
+     </h2>
+     <p>
+      This project was part of the same numerical physics course at EPFL and focused on simulating wave propagation in shallow water with varying depth. We implemented a three-level finite difference scheme and compared several wave equations under different boundary and topographic conditions.
+      <br/>
+      <br/>
+      The simulation reproduced key effects such as amplitude increase near the shore and partial wave reflection. I also compared the  numerical results to WKB analytical predictions.
+     </p>
+     <div class="video-grid">
+      <div class="video-container white-bg">
+       <video autoplay="" class="cropped-horizontal" loop="" muted="" playsinline="" src="videos/tsunami/tsunami.mp4">
+       </video>
+       <p class="video-caption">
+        Wave approaching the coastline
+       </p>
+      </div>
+      <div class="video-container white-bg">
+       <video autoplay="" class="video-full" loop="" muted="" playsinline="" src="videos/tsunami/wkb_prediction.mp4">
+       </video>
+       <p class="video-caption">
+        Wave predicted by the WKB approximation
+       </p>
+      </div>
+     </div>
+     <div class="video-grid">
+      <div class="image-container">
+       <img alt="Tsunami amplitude" class="media-item" src="images/tsunami/amplitude.jpg">
+        <p class="image-caption">
+         Maximum wave amplitude as a function of position
+        </p>
+       </img>
+      </div>
+      <div class="image-container">
+       <img alt="Wave representation" class="media-item" src="images/tsunami/tsunami_wave.jpg">
+        <p class="image-caption">
+         Wave profile approaching the coast
+        </p>
+       </img>
+      </div>
+     </div>
+    </section>
+   </a>
+   <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet6">
+    <h2>
+     Newtonian gravitation
+    </h2>
+    <p>
+     This project explored the motion of an asteroid under Newtonian gravity, first influenced only by the Sun, then by both the Sun and Jupiter. We implemented a 4th-order Runge&ndash;Kutta integrator with optional adaptive time stepping to compare orbital trajectories and energy conservation.
+    </p>
+    <div class="video-grid">
+     <div class="image-container">
+      <img alt="Trajectories of the asteroid" class="media-item" src="images/gravitation/trajectories.png">
+       <p class="image-caption">
+        Asteroid trajectories around the Sun for different time step resolutions
+       </p>
+      </img>
+     </div>
+     <div class="image-container">
+      <img alt="Asteroid in L4" class="media-item" src="images/gravitation/lagrange.jpg">
+       <p class="image-caption">
+        Asteroid trajectory near the L4 Lagrange point of the Sun&ndash;Jupiter system
+       </p>
+      </img>
+     </div>
+    </div>
+   </section>
+   <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet7">
+    <h2>
+     Chaos theory
+    </h2>
+    <p>
+     This simulation models the motion of a magnetic needle in an oscillating magnetic field. It was part of the same numerical physics course at EPFL, using a velocity-dependent Verlet scheme. We explored different dynamical regimes including resonance, phase-space structure, sensitivity to initial conditions, and chaotic behavior with and without damping.
+     <br/>
+     <br/>
+     Not all projects from this course are shown here, as some of them were more technical and less suited to quick visual illustration.
+    </p>
+    <div class="video-grid">
+     <div class="video-container white-bg">
+      <video autoplay="" class="cropped-horizontal" loop="" muted="" playsinline="" src="videos/chaos/poincare.mp4">
+      </video>
+      <p class="video-caption">
+       Poincar&eacute; section showing phase-space structure
+      </p>
+     </div>
+     <div class="image-container">
+      <img alt="Exponential error increase" class="media-item" src="images/chaos/error_increase.jpg">
+       <p class="image-caption">
+        Exponential divergence of nearby trajectories in the chaotic regime
+       </p>
+      </img>
+     </div>
+    </div>
+   </section>
+   <section class="projet" data-aos="fade-up" data-aos-delay="100" id="projet8">
+    <h2>
+     Physics experiments
+    </h2>
+    <p>
+     During my second year of bachelor's studies, I conducted 12 physics lab experiments and learned how to write scientific reports. These assignments focused on experimental method, uncertainty analysis, and scientific communication. I processed data using Python (NumPy, Matplotlib) and learned how to structure technical documents using LaTeX.
+     <br/>
+     <br/>
+     I learned how to handle experimental data with attention to detail and present my findings clearly using consistent and rigorous documentation standards.
+    </p>
+    <div class="video-grid">
+     <div class="image-container">
+      <img alt="Photovoltaique" class="media-item" src="images/experiments/photovoltaique.svg"/>
+      <p class="image-caption">
+       Electrical power generated by a silicon amorphous photovoltaic cell as a function of the voltage
+      </p>
+     </div>
+     <div class="image-container">
+      <img alt="Rendement moteurs" class="media-item" src="images/experiments/moteurs.jpg"/>
+      <p class="image-caption">
+       Efficiency of a DC motor versus rotation frequency for bipolar and tripolar rotors
+      </p>
+     </div>
+    </div>
+    <div class="video-grid">
+     <div class="image-container">
+      <img alt="Amortissement faible" class="media-item" src="images/experiments/amortie-faible.png"/>
+      <p class="image-caption">
+       Free oscillations of a rotating disk with low damping
+      </p>
+     </div>
+     <div class="image-container">
+      <img alt="Oscillations forc&eacute;es" class="media-item" src="images/experiments/excitations.png"/>
+      <p class="image-caption">
+       Oscillation amplitude of a rotating disk as a function of excitation frequency
+      </p>
+     </div>
+    </div>
+    <div class="video-grid">
+     <div class="image-container">
+      <img alt="Spectre rayons X" class="media-item" src="images/experiments/rayonsX.jpg"/>
+      <p class="image-caption">
+       X-ray diffraction pattern of a NaCl crystal at different acceleration voltages
+      </p>
+     </div>
+     <div class="image-container black-background">
+      <img alt="Spectre hydrog&egrave;ne" class="media-item zoomed" src="images/experiments/hydrogene.jpeg"/>
+      <p class="image-caption white-caption">
+       Emission spectrum of hydrogen
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <p>
+    &copy; 2025 &mdash; Nils Coutant. All rights reserved.
+   </p>
+   <p>
+    Last update : August 2025
+   </p>
+   <div class="footer-links">
+    <a href="mailto:nils@coutant.xyz">
+     nils@coutant.xyz
+    </a>
+   </div>
+  </footer>
+  <button id="scrollTopBtn" onclick="scrollToTop()">
+   &uarr;
+  </button>
+  <script>
+   const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  </script>
+ </body>
+</html>
